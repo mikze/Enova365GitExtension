@@ -13,10 +13,20 @@ using enova365.GitExtension.Extender.Git;
 [assembly: FolderView("enova365.GitExtension/GitExtension",
     Priority = 100000,
     Description = "BLOBLALSA",
-    ObjectType = typeof(Notowania),
+    ObjectType = typeof(Commits),
     ObjectPage = "Notowania.Ogolne.pageform.xml",
     ReadOnlySession = false,
     BrickColor = FolderViewAttribute.BlackBrick,
+    ConfigSession = false
+)]
+
+[assembly: FolderView("enova365.GitExtension/GitExtension2",
+    Priority = 100001,
+    Description = "NOWE OKNO!",
+    ObjectType = typeof(Commits),
+    ObjectPage = "Notowania.Ogolne2.pageform.xml",
+    ReadOnlySession = false,
+    BrickColor = FolderViewAttribute.GreenBrick,
     ConfigSession = false
 )]
 
@@ -29,8 +39,6 @@ namespace enova365.GitExtension.Extender.Git
 
         [Context]
         public Login Login { get; set; }
-
-
     }
 }
 

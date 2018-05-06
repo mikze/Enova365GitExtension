@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>enova365.GitExtension</RootNamespace>
     <AssemblyName>enova365.GitExtension</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -61,11 +64,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extender\Git\Akcja.cs" />
-    <Compile Include="Extender\Git\Formularz\MyPageForm1.cs" />
-    <Compile Include="Extender\Git\GetInfo.cs" />
+    <Compile Include="Extender\Git\Helpers\ContributorListFiller.cs" />
+    <Compile Include="Extender\Git\Helpers\Deserializer.cs" />
+    <Compile Include="Extender\Git\Helpers\HTTPRequester.cs" />
+    <Compile Include="Extender\Git\Helpers\UrlHelper.cs" />
+    <Compile Include="Extender\Git\Models\Commit.cs" />
+    <Compile Include="Extender\Git\Models\Contributor.cs" />
     <Compile Include="Extender\Git\Menu.cs" />
-    <Compile Include="Extender\Git\Notowania.cs" />
+    <Compile Include="Extender\Git\Commits.cs" />
+    <Compile Include="Extender\Git\Models\Respository.cs" />
+    <Compile Include="Extender\Git\Repo.cs" />
+    <Compile Include="Extender\Git\RepoConstructor.cs" />
     <Compile Include="Extender\Menu\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Tools.cs" />
@@ -100,9 +109,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne.pageform.xml" />
-    <EmbeddedResource Include="Extender\Git\Formularz\MyPageForm1.ogolne.pageform.xml" />
-    <Content Include="Utils\Icon.ico" />
+    <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne.pageform.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TESTS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne2.pageform.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

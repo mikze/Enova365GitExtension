@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0"?>
 <DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
-  <Page CaptionHtml="Notowania GPW" DataContext="{DataSource}">
-    <Group CaptionHtml="Aktualne notowania">
+  <Page CaptionHtml="Commits" DataContext="{DataSource}">
+    <Group CaptionHtml="All commits">
       <Row>
         <Stack Width="200" Height="*">
-          <Grid EditValue="{AktualneNotowania}" Width="150" Height="*" >
-            <Field CaptionHtml="Nazwa" Width="20" EditValue="{Nazwa}" />
-            <Field CaptionHtml="Kurs" Width="15" EditValue="{Kurs}" />
+          <Grid EditValue="{AllCommits}" Width="150" Height="*" >
+            <Field CaptionHtml="Author" Width="20" EditValue="{name}" />
+            <Field CaptionHtml="Sha" Width="20" EditValue="{sha}" />
+            <Field CaptionHtml="Message" Width="20" EditValue="{message}" />
+            <Field CaptionHtml="Branch" Width="20" EditValue="{branch}" />
+            <Field CaptionHtml="Date" Width="20" EditValue="{date}" />
           </Grid>
         </Stack>
       </Row>
