@@ -66,14 +66,15 @@
   <ItemGroup>
     <Compile Include="Extender\Git\Helpers\ContributorListFiller.cs" />
     <Compile Include="Extender\Git\Helpers\Deserializer.cs" />
+    <Compile Include="Extender\Git\Helpers\GetCommitsFromBranch.cs" />
     <Compile Include="Extender\Git\Helpers\HTTPRequester.cs" />
     <Compile Include="Extender\Git\Helpers\UrlHelper.cs" />
     <Compile Include="Extender\Git\Models\Commit.cs" />
+    <Compile Include="Extender\Git\Models\CommitsPerDay.cs" />
     <Compile Include="Extender\Git\Models\Contributor.cs" />
     <Compile Include="Extender\Git\Menu.cs" />
-    <Compile Include="Extender\Git\Commits.cs" />
+    <Compile Include="Extender\Git\FormProps.cs" />
     <Compile Include="Extender\Git\Models\Respository.cs" />
-    <Compile Include="Extender\Git\Repo.cs" />
     <Compile Include="Extender\Git\RepoConstructor.cs" />
     <Compile Include="Extender\Menu\Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,9 +115,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utils\Icon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TESTS\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne2.pageform.xml">
       <SubType>Designer</SubType>

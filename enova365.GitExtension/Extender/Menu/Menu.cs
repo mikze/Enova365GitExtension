@@ -1,9 +1,6 @@
 ﻿#define OKNO_GLOWNE
 
-using Soneta.Business;
-using Soneta.Business.App;
 using Soneta.Business.UI;
-using enova365.GitExtension.Extender;
 using Soneta.Business.Licence;
 
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace enova365.GitExtension.Extender.Git
 {
@@ -11,7 +7,11 @@ namespace enova365.GitExtension.Extender.Git
         public string name { get; set; }
         public List<Commit> ListOfCommits { get; set; }
         public int NumberOfCommits => ListOfCommits.Count;
-        public int AvgNumberOfCommitsPerDay { get; }
+        public int AvgNumberOfCommitsPerDay { get
+            {
+                return NumberOfCommits;
+            }
+        }
 
         //private SetAvgNum;
     }

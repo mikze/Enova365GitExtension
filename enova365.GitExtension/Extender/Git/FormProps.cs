@@ -1,22 +1,18 @@
-﻿using enova365.GitExtension.Extender.Git.Models;
-using Newtonsoft.Json.Linq;
+﻿using enova365.GitExtension.Extender.Git.Helpers;
+using enova365.GitExtension.Extender.Git.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Threading;
 
 namespace enova365.GitExtension.Extender.Git
 {
-
-    public class Commits
+    public class FormProps
     {
         #region Property dla formularza
 
-        //private response Res = new response();
-        //private GetInfo Requester = new GetInfo();
-        private Repository repo;
+       private Repository repo;
 
-       public Commits()
+       public FormProps()
         {
             try
             {
@@ -43,6 +39,18 @@ namespace enova365.GitExtension.Extender.Git
             get
             {
                 return repo.listOfContributors;
+            }
+        }
+
+        public IEnumerable<CommitsPerDay> ContributorCommitsPerDay
+        {
+            get
+            {
+                GetCommitsFromBranch getCommitsFromBranch = new GetCommitsFromBranch();
+                Contributor contributor = repo.listOfContributors[1];
+                string branch = "master";
+
+                return getCommitsFromBranch.getCommitsListByContributorPerDay(contributor, branch);
             }
         }
 
