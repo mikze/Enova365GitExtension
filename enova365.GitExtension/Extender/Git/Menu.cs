@@ -30,6 +30,16 @@ using enova365.GitExtension.Extender.Git;
     ConfigSession = false
 )]
 
+[assembly: FolderView("enova365.GitExtension/GitExtension3",
+    Priority = 100002,
+    Description = "NOWE OKNO!2",
+    ObjectType = typeof(FormProps),
+    ObjectPage = "Notowania.Ogolne3.pageform.xml",
+    ReadOnlySession = false,
+    BrickColor = FolderViewAttribute.YellowBrick,
+    ConfigSession = false
+)]
+
 namespace enova365.GitExtension.Extender.Git
 {
     public class Menu

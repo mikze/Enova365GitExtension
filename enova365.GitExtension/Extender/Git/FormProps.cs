@@ -10,18 +10,18 @@ namespace enova365.GitExtension.Extender.Git
     {
         #region Property dla formularza
 
-       private Repository repo;
+        private Repository repo;
 
-       public FormProps()
+        public FormProps()
         {
             try
             {
                 Trace.WriteLine("Connectiong to repo ...");
                 repo = RepoConstructor.ConstructRepository("GospodarkaProjFront", "mikze");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Trace.WriteLine("Could not connect because: " + e );
+                Trace.WriteLine("Could not connect because: " + e);
                 Trace.WriteLine("Check your internet connection!");
             }
         }
@@ -54,7 +54,18 @@ namespace enova365.GitExtension.Extender.Git
             }
         }
 
-        #endregion Property dla formularza
-    }
+        public IEnumerable<AvgNumberCommitsOfContributor> AvgCommits
+        {
+            get
+            {
+                {
+                    GetCommitsFromBranch getCommitsFromBranch = new GetCommitsFromBranch();
+                    string branch = "master";
+                    return getCommitsFromBranch.GetAvgCommitsFromBranch(branch, repo);
+                }
+            }
 
+            #endregion Property dla formularza
+        }
+    }
 }

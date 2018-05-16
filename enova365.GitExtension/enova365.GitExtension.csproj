@@ -69,6 +69,7 @@
     <Compile Include="Extender\Git\Helpers\GetCommitsFromBranch.cs" />
     <Compile Include="Extender\Git\Helpers\HTTPRequester.cs" />
     <Compile Include="Extender\Git\Helpers\UrlHelper.cs" />
+    <Compile Include="Extender\Git\Models\AvgNumberCommitsOfContributor.cs" />
     <Compile Include="Extender\Git\Models\Commit.cs" />
     <Compile Include="Extender\Git\Models\CommitsPerDay.cs" />
     <Compile Include="Extender\Git\Models\Contributor.cs" />
@@ -115,7 +116,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utils\Icon.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne3.pageform.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Extender\Git\UI\Notowania.Ogolne2.pageform.xml">
       <SubType>Designer</SubType>

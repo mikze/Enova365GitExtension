@@ -8,5 +8,4 @@ namespace enova365.GitExtension.Extender.Git.Models
         public int dayOfUpload => date.DayOfYear;
         public int numberOfCommits { get; set; }
     }
-   
 }

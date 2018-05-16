@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<DataForm xmlns="http://www.enova.pl/schema/form.xsd" Priority="100">
+  <Page CaptionHtml="Commits" DataContext="{DataSource}">
+    <Group CaptionHtml="All commits">
+      <Row>
+        <Stack Width="200" Height="*">
+          <Grid EditValue="{AvgCommits}" Width="150" Height="*" >
+            <Field CaptionHtml="name" Width="20" EditValue="{name}" />
+            <Field CaptionHtml="Avg" Width="20" EditValue="{Avg}" />
+          </Grid>
+        </Stack>
+      </Row>
+    </Group>
+  </Page>
+</DataForm>
