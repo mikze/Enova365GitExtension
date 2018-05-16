@@ -47,7 +47,7 @@ namespace enova365.GitExtension.Extender.Git
             get
             {
                 GetCommitsFromBranch getCommitsFromBranch = new GetCommitsFromBranch();
-                Contributor contributor = repo.listOfContributors[1];
+                Contributor contributor = repo.listOfContributors[0];
                 string branch = "master";
 
                 return getCommitsFromBranch.getCommitsListByContributorPerDay(contributor, branch);
